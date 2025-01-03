@@ -1,0 +1,8 @@
+[commit]
+        template = .commitTemplate.txt
+[core]
+        eol = lf
+        autocrlf = input
+        editor = cursor --wait
+[init]
+        defaultBranch = main
