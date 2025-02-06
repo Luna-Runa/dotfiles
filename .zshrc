@@ -82,6 +82,7 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
     fzf
+    fasd
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -120,56 +121,6 @@ alias ls='colorls'
 alias ll='colorls -lA --sd'
 alias dp='docker ps'
 
-# Docker 컨테이너 이름 찾기 함수
-get_container() {
-    local keyword=$1
-    docker ps --format '{{.Names}}' | grep "$keyword"
-}
-
-# Docker restart 단축 명령어
-dr() {
-    local container=$(get_container $1)
-    if [ -n "$container" ]; then
-        echo "Restarting container: $container"
-        docker restart $container
-    else
-        echo "No container found matching: $1"
-    fi
-}
-
-# Docker logs 단축 명령어
-dl() {
-    local container=$(get_container $1)
-    if [ -n "$container" ]; then
-        echo "Showing logs for container: $container"
-        docker logs -f --tail=200 $container
-    else
-        echo "No container found matching: $1"
-    fi
-}
-
-# Docker restart and logs 단축 명령어
-drl() {
-    local container=$(get_container $1)
-    if [ -n "$container" ]; then
-        echo "Restarting and showing logs for container: $container"
-        docker restart $container && docker logs -f --tail=200 $container
-    else
-        echo "No container found matching: $1"
-    fi
-}
-
-# Docker exec 단축 명령어
-de() {
-    local container=$(get_container $1)
-    if [ -n "$container" ]; then
-        echo "Executing bash in container: $container"
-        docker exec -it $container bash
-    else
-        echo "No container found matching: $1"
-    fi
-}
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -188,11 +139,23 @@ prev() {
   sh -c "pet new `printf %q "$PREV"`"
 }
 
-pet-select() {
+# pet-select() {
+#   BUFFER=$(pet search --query "$LBUFFER")
+#   CURSOR=$#BUFFER
+#   zle redisplay
+# }
+# zle -N pet-select
+# stty -ixon
+# bindkey '^s' pet-select
+
+pet-exec() {
   BUFFER=$(pet search --query "$LBUFFER")
-  CURSOR=$#BUFFER
+  if [ -n "$BUFFER" ]; then
+    CURSOR=$#BUFFER
+    zle accept-line 
+  fi
   zle redisplay
 }
-zle -N pet-select
+zle -N pet-exec
 stty -ixon
-bindkey '^s' pet-select
+bindkey '^s' pet-exec
