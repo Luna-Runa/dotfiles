@@ -157,5 +157,10 @@ pet-exec() {
   zle redisplay
 }
 zle -N pet-exec
-stty -ixon
+if [[ -t 0 && $POWERLEVEL9K_INSTANT_PROMPT != 'quiet' ]]; then
+  stty -ixon
+fi
 bindkey '^s' pet-exec
+
+# fasd
+alias v='f -e vim'
