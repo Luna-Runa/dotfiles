@@ -1,0 +1,158 @@
+{
+  "editor.inlineSuggest.enabled": true,
+  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.eol": "\n",
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.activeIconPack": "nest",
+  "editor.bracketPairColorization.enabled": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.defaultDateLocale": "ko",
+  "gitlens.defaultDateFormat": "YYYY/MM/DD/ H:m",
+  "gitlens.defaultTimeFormat": "H:m",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+
+  "python.languageServer": "None",
+  "git.autofetch": true,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.rulers": [140],
+  "editor.minimap.enabled": true,
+  "autoimport.useSemiColon": false,
+  "editor.accessibilitySupport": "off",
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "editor.fontFamily": "MesloLGS NF, Menlo, Monaco, 'Courier New', monospace",
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "remote.autoForwardPortsSource": "hybrid",
+  "cursor.cpp.disabledLanguages": ["plaintext"],
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "files.associations": {
+    "*.yaml": "yaml",
+    "*.xml": "xml"
+  },
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "background.enabled": false,
+  "background.fullscreen": {
+    "images": [
+      "file:///C:/Users/NT-176/Downloads/KakaoTalk_20240424_200823127.png"
+    ], // url of your image
+    // "image": ["https://pathtoimage.png"], // An array may be useful when set interval for carousel
+    "opacity": 0.94, // 0.85 ~ 0.95 recommended
+    "size": "cover", // also css, `cover` to self-adaption (recommended)，or `contain`、`200px 200px`
+    "position": "center", // alias to `background-position`, default `center`
+    "interval": 0 // seconds of interval for carousel, default `0` to disabled.
+  },
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "editor.tabSize": 2,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "remote.SSH.remotePlatform": {
+    "101": "linux",
+    "104": "linux",
+    "115": "linux",
+    "170": "linux",
+    "196": "linux",
+    "211": "linux",
+    "192.168.100.223": "linux",
+    "192.168.100.198": "linux",
+    "192.168.100.224": "linux",
+    "192.168.100.170": "linux",
+    "210.116.106.104": "linux",
+    "aipf": "linux",
+    "KISTEP_125": "linux"
+  },
+  // "remote.SSH.path": "/usr/bin/ssh",
+  // "remote.SSH.configFile": "/home/luna/.ssh/config",
+  "terminal.integrated.scrollback": 5000,
+  "editor.minimap.showSlider": "always",
+  "editor.minimap.maxColumn": 20,
+  "editor.minimap.size": "fill",
+  "workbench.editorLargeFileConfirmation": 2048,
+  "editor.largeFileOptimizations": false,
+  "redhat.telemetry.enabled": true,
+  "makefile.configureOnOpen": true,
+  "workbench.editorAssociations": {
+    "*.xlsx": "gc-excelviewer-excel-editor"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "diffEditor.ignoreTrimWhitespace": false
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "mikeburgh.xml-format"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+  },
+  "glassit.alpha": 255,
+  "xml.server.vmargs": "-Xmx128M",
+  "window.commandCenter": true,
+  "editor.minimap.renderCharacters": false,
+  "workbench.colorTheme": "Slack Theme Dark Mode",
+  "docker.extension.enableComposeLanguageServer": true,
+  "window.menuBarVisibility": "toggle",
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "security.promptForLocalFileProtocolHandling": false,
+  "security.promptForRemoteFileProtocolHandling": false,
+  "database-client.autoSync": true
+  // "extensions.gallery.serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery"
+}

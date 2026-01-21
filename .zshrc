@@ -209,10 +209,19 @@ pet-exec() {
   zle redisplay
 }
 zle -N pet-exec
-if [[ -t 0 && $POWERLEVEL9K_INSTANT_PROMPT != 'quiet' ]]; then
+# Powerlevel10k instant prompt 설정
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+if [[ -t 0 ]]; then
   stty -ixon
 fi
 bindkey '^s' pet-exec
 
 # fasd
 alias v='f -e vim'
+
+# react-dev-inspector
+export REACT_EDITOR=cursor
+
+setopt HIST_FCNTL_LOCK
+setopt HIST_REDUCE_BLANKS
