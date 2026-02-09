@@ -1,0 +1,9 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "oh-my-posh claude --config ~/ps_theme.json"
+  },
+  "language": "korean",
+  "autoUpdatesChannel": "latest",
+  "model": "sonnet"
+}
