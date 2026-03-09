@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "compile": "taskkill /f /im shortcut.exe 2>nul & \"C:\\Program Files\\AutoHotkey\\Compiler\\Ahk2Exe.exe\" /in shortcut.ahk /out shortcut.exe /base \"C:\\Program Files\\AutoHotkey\\v2\\AutoHotkey64.exe\" /silent & start shortcut.exe"
+  }
+}
